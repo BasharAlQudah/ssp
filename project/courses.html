@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include your custom CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+    <h2>Courses</h2>
+    <div id="course-list"></div>
+    <script>
+        // Fetch course data from courses.php and populate the course list
+        fetch("courses.php")
+            .then(response => response.json())
+            .then(data => {
+                const courseList = document.getElementById("course-list");
+                data.forEach(course => {
+                    const courseItem = document.createElement("div");
+                    courseItem.classList.add("course-box");
+                    courseItem.innerHTML = `
+                        <h2>${course.title}</h2>
+                        <p>${course.description}</p>
+                        <button class="btn ${course.isEnrolled ? 'btn-remove' : 'btn-add'}" data-course-id="${course.id}">${course.isEnrolled ? 'Remove Course' : 'Add Course'}</button>
+                    `;
+                    courseList.appendChild(courseItem);
+                });
+            });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include your custom script file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

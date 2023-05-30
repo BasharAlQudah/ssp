@@ -1,0 +1,116 @@
+html {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+nav {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+  /* Additional styles for courses.html */
+#course-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-item {
+  flex: 0 0 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-details {
+  margin: 20px;
+}
+
+
+.course-details p {
+  margin-bottom: 5px;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn-back:hover {
+  background-color: #0056b3;
+}
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.course-box {
+  width: 300px;
+  background-color: #f5f5f5;
+  margin: 10px;
+  padding: 20px;
+}
+
+.course {
+  text-align: center;
+}
+
+.course h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.course p {
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+.box{
+  width: 300px;
+  border: 5px solid black;
+  padding: 5px;
+  display: inline-block;
+  margin: 20px;
+
+}
